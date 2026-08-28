@@ -1,0 +1,20 @@
+{
+  "name": "vishal-enterprises",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Vishal Enterprises workforce management platform monorepo",
+  "packageManager": "pnpm@9.12.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev:web": "pnpm --filter @vishal/web dev",
+    "dev:api": "pnpm --filter @vishal/api dev",
+    "build:web": "pnpm --filter @vishal/web build",
+    "build:api": "pnpm --filter @vishal/api build",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "pnpm -r lint",
+    "deploy:web": "pnpm --filter @vishal/web deploy",
+    "deploy:api": "pnpm --filter @vishal/api deploy"
+  }
+}

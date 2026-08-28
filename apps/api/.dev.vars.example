@@ -1,0 +1,4 @@
+# Copy to .dev.vars for local development. Never commit the real .dev.vars file.
+TURNSTILE_SECRET_KEY=
+SESSION_SIGNING_SECRET=
+ADMIN_INVITE_SECRET=

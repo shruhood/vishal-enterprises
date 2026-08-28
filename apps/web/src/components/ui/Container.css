@@ -1,0 +1,12 @@
+.ve-container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .ve-container {
+    padding: 0 var(--space-6);
+  }
+}

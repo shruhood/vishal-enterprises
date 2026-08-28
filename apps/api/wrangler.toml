@@ -1,0 +1,39 @@
+name = "vishal-enterprises-api"
+main = "src/index.ts"
+compatibility_date = "2026-08-01"
+compatibility_flags = ["nodejs_compat"]
+
+# ---------------------------------------------------------------------------
+# D1 — structured data (employers, workers, jobs, applications, etc.)
+# Run `wrangler d1 create vishal_db` and paste the returned database_id below.
+# ---------------------------------------------------------------------------
+[[d1_databases]]
+binding = "DB"
+database_name = "vishal_db"
+database_id = "[D1_DATABASE_ID]"
+
+# ---------------------------------------------------------------------------
+# R2 — private files (resumes, certificates, company documents). This
+# bucket must NEVER be given public access; files are served only through
+# authenticated Worker routes using short-lived signed URLs.
+# ---------------------------------------------------------------------------
+[[r2_buckets]]
+binding = "DOCUMENTS"
+bucket_name = "vishal-documents"
+
+# ---------------------------------------------------------------------------
+# Environment variables / secrets.
+# Non-secret values go here; secrets are set with `wrangler secret put`
+# and must never be committed (see .dev.vars.example).
+# ---------------------------------------------------------------------------
+[vars]
+ENVIRONMENT = "development"
+ALLOWED_ORIGIN = "http://localhost:5173"
+
+# Secrets to configure via `wrangler secret put <NAME>`:
+#   TURNSTILE_SECRET_KEY
+#   SESSION_SIGNING_SECRET
+#   ADMIN_INVITE_SECRET
+
+[observability]
+enabled = true

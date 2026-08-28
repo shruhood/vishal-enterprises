@@ -1,0 +1,77 @@
+.ve-mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+}
+
+.ve-mobile-menu__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.ve-mobile-menu__panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(320px, 85vw);
+  background: var(--color-surface-elevated);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.ve-mobile-menu__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-5);
+}
+
+.ve-mobile-menu__title {
+  font-weight: 700;
+  font-size: var(--font-size-md);
+}
+
+.ve-mobile-menu__close {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: transparent;
+  cursor: pointer;
+  font-size: var(--font-size-md);
+}
+
+.ve-mobile-menu__list {
+  list-style: none;
+  margin: 0 0 var(--space-6);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.ve-mobile-menu__link {
+  display: block;
+  padding: var(--space-3) 0;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: var(--font-size-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.ve-mobile-menu__link.is-active {
+  color: var(--color-primary);
+}
+
+.ve-mobile-menu__actions {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-top: var(--space-5);
+}
