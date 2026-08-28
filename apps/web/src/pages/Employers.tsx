@@ -27,6 +27,7 @@ export function Employers() {
     title: "Request Manpower",
     description:
       "Tell us what workforce you need and we will get back with availability and next steps.",
+    path: "/employers",
   });
 
   const [state, setState] = useState<FormState>("idle");

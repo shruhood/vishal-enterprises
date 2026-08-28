@@ -5,17 +5,15 @@ export interface NavItem {
   href: string;
 }
 
+// B2B-focused public navigation. Admin removed from public nav (it lives
+// behind /admin/login, not in the marketing menu).
 export const primaryNavItems: NavItem[] = [
-  { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Industries", href: "/industries" },
-  { label: "Locations", href: "/locations" },
-  { label: "Jobs", href: "/jobs" },
-  { label: "For Employers", href: "/employers" },
-  { label: "For Workers", href: "/workers" },
+  { label: "Projects", href: "/projects" },
+  { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
-  { label: "Admin", href: "/admin/login" },
 ];
 
 export function Navigation({ onNavigate }: { onNavigate?: () => void }) {
@@ -28,7 +26,6 @@ export function Navigation({ onNavigate }: { onNavigate?: () => void }) {
               to={item.href}
               onClick={onNavigate}
               className={({ isActive }) => "ve-nav-link" + (isActive ? " is-active" : "")}
-              end={item.href === "/"}
             >
               {item.label}
             </NavLink>

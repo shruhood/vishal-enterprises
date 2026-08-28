@@ -7,6 +7,7 @@ export function About() {
     title: "About",
     description:
       "About Vishal Enterprises — a government-registered workforce firm serving Daman, Vapi, Bhilad, Silvassa and surrounding industrial areas.",
+    path: "/about",
   });
 
   return (

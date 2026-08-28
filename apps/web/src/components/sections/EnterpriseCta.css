@@ -1,0 +1,24 @@
+.ve-enterprise__audiences {
+  list-style: none;
+  margin: 0 0 var(--space-6);
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  justify-content: center;
+}
+
+.ve-enterprise__audiences li {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  letter-spacing: var(--letter-spacing-wide);
+  color: var(--color-charcoal-text);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-4);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.ve-enterprise__cta {
+  text-align: center;
+}

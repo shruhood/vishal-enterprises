@@ -9,6 +9,7 @@ export function Contact() {
     title: "Contact",
     description:
       "Get in touch with Vishal Enterprises — phone, WhatsApp, email and office address.",
+    path: "/contact",
   });
 
   return (

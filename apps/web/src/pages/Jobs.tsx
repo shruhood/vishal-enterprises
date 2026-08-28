@@ -26,6 +26,7 @@ export function Jobs() {
     title: "Jobs",
     description:
       "Current job openings from Vishal Enterprises — reliable workforce placements across Gujarat and beyond.",
+    path: "/jobs",
   });
 
   const [jobs, setJobs] = useState<Job[]>([]);

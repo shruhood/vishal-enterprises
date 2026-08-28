@@ -1,88 +1,92 @@
 .ve-content h1 {
-  margin-bottom: 0.5rem;
+  font-size: var(--font-size-section);
+  font-weight: 800;
+  letter-spacing: var(--letter-spacing-tight);
+  margin-bottom: var(--space-3);
+  color: var(--color-text);
 }
 
 .ve-content__lead {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: var(--ve-text-muted, #4a4a4a);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-muted);
   max-width: 760px;
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-6);
 }
 
 .ve-content__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  margin-top: 1.5rem;
+  gap: var(--space-5);
+  margin-top: var(--space-4);
 }
 
 @media (max-width: 720px) {
   .ve-content__grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: var(--space-4);
   }
 }
 
 .ve-content__grid h2 {
-  font-size: 1.2rem;
-  margin-bottom: 0.4rem;
-  color: var(--ve-text, #1a1a1a);
+  font-size: var(--font-size-md);
+  margin-bottom: var(--space-2);
+  color: var(--color-text);
 }
 
 .ve-content__grid p {
-  color: var(--ve-text-muted, #4a4a4a);
-  line-height: 1.55;
+  color: var(--color-text-muted);
+  line-height: var(--line-height-relaxed);
 }
 
 .ve-content__block {
-  margin-top: 2.5rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--ve-border, #e4e4e4);
+  margin-top: var(--space-7);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
 }
 
 .ve-content__block h2 {
-  font-size: 1.3rem;
-  margin-bottom: 0.6rem;
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--space-3);
 }
 
 .ve-content__block p {
-  color: var(--ve-text-muted, #4a4a4a);
-  line-height: 1.55;
+  color: var(--color-text-muted);
+  line-height: var(--line-height-relaxed);
   max-width: 760px;
 }
 
 .ve-content__list {
-  margin: 0.5rem 0 0;
-  padding-left: 1.2rem;
-  color: var(--ve-text, #1a1a1a);
+  margin: var(--space-2) 0 0;
+  padding-left: var(--space-5);
+  color: var(--color-text);
 }
 
 .ve-content__list li {
-  margin-bottom: 0.25rem;
+  margin-bottom: var(--space-2);
 }
 
 .ve-content__steps {
-  margin: 0.5rem 0 0;
-  padding-left: 1.4rem;
-  color: var(--ve-text, #1a1a1a);
+  margin: var(--space-2) 0 0;
+  padding-left: var(--space-5);
+  color: var(--color-text);
 }
 
 .ve-content__steps li {
-  margin-bottom: 0.6rem;
-  line-height: 1.55;
-  color: var(--ve-text-muted, #4a4a4a);
+  margin-bottom: var(--space-3);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-text-muted);
 }
 
 .ve-content__steps strong {
-  color: var(--ve-text, #1a1a1a);
+  color: var(--color-text);
 }
 
 .ve-chip-list--lg {
-  margin-top: 1.5rem;
+  margin-top: var(--space-5);
 }
 
 .ve-chip-list--lg .ve-chip {
-  padding: 0.5rem 1rem;
-  font-size: 0.95rem;
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--font-size-sm);
 }

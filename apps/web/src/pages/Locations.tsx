@@ -8,6 +8,7 @@ export function Locations() {
     title: "Service Areas",
     description:
       "Vishal Enterprises serves industries across Daman, Vapi, Bhilad, Silvassa and surrounding industrial areas.",
+    path: "/locations",
   });
 
   return (

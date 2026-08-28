@@ -9,6 +9,9 @@ import { Jobs } from "./pages/Jobs";
 import { Employers } from "./pages/Employers";
 import { Workers } from "./pages/Workers";
 import { Contact } from "./pages/Contact";
+import { Projects } from "./pages/Projects";
+import { Careers } from "./pages/Careers";
+import { RequestWorkforce } from "./pages/RequestWorkforce";
 import { NotFound } from "./pages/NotFound";
 import { Login } from "./pages/admin/Login";
 import { AdminLayout, AdminDashboard } from "./pages/admin/AdminLayout";
@@ -25,6 +28,9 @@ export default function App() {
         <Route path="about" element={<About />} />
         <Route path="services" element={<Services />} />
         <Route path="industries" element={<Industries />} />
+        <Route path="projects" element={<Projects />} />
+        <Route path="careers" element={<Careers />} />
+        <Route path="request-workforce" element={<RequestWorkforce />} />
         <Route path="locations" element={<Locations />} />
         <Route path="jobs" element={<Jobs />} />
         <Route path="employers" element={<Employers />} />

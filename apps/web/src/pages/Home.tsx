@@ -1,84 +1,34 @@
-import { Button } from "../components/ui/Button";
-import { Container } from "../components/ui/Container";
-import { companyConfig } from "../config/company";
 import { useSeo } from "../lib/seo";
-import "./Home.css";
+import { Hero } from "../components/sections/Hero";
+import { TrustStrip } from "../components/sections/TrustStrip";
+import { AboutPreview } from "../components/sections/AboutPreview";
+import { Capabilities } from "../components/sections/Capabilities";
+import { Industries } from "../components/sections/Industries";
+import { ProcessTimeline } from "../components/sections/ProcessTimeline";
+import { SafetyCompliance } from "../components/sections/SafetyCompliance";
+import { WhyUs } from "../components/sections/WhyUs";
+import { EnterpriseCta } from "../components/sections/EnterpriseCta";
+import { FinalCta } from "../components/sections/FinalCta";
 
 export function Home() {
   useSeo({
-    title: "Reliable Workforce Solutions for Industry",
-    description: companyConfig.messaging.subheadline,
+    title: "Industrial Workforce & Manpower Solutions",
+    description:
+      "Vishal Enterprises provides skilled, semi-skilled and unskilled industrial workforce and manpower solutions for manufacturing, engineering, EPC, infrastructure and construction organizations.",
   });
 
   return (
     <>
-      <section className="ve-hero">
-        <Container>
-          <div className="ve-hero__content">
-            <span className="ve-hero__eyebrow">Government Registered Workforce Firm</span>
-            <h1 className="ve-hero__headline">{companyConfig.messaging.headline}</h1>
-            <p className="ve-hero__subheadline">{companyConfig.messaging.subheadline}</p>
-            <div className="ve-hero__actions">
-              <Button as="a" href="/employers" variant="primary">
-                {companyConfig.messaging.primaryCta}
-              </Button>
-              <Button as="a" href="/workers" variant="secondary">
-                {companyConfig.messaging.secondaryCta}
-              </Button>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      <section className="ve-trust" aria-label="Trust indicators">
-        <Container>
-          <ul className="ve-trust__list">
-            <li>10+ Years of Management Experience</li>
-            <li>Government Registered Firm</li>
-            <li>PF &amp; ESIC Support as Applicable</li>
-            <li>Continuous Workforce Inspection</li>
-          </ul>
-        </Container>
-      </section>
-
-      <section className="ve-section" aria-labelledby="service-areas-heading">
-        <Container>
-          <h2 id="service-areas-heading" className="ve-section__heading">
-            Service Areas
-          </h2>
-          <p className="ve-section__intro">
-            Serving industries across the following regions, with continuous workforce
-            support.
-          </p>
-          <ul className="ve-chip-list">
-            {companyConfig.serviceAreas.map((area) => (
-              <li key={area} className="ve-chip">
-                {area}
-              </li>
-            ))}
-          </ul>
-        </Container>
-      </section>
-
-      <section className="ve-section ve-section--alt" aria-labelledby="cta-heading">
-        <Container>
-          <div className="ve-cta-banner">
-            <h2 id="cta-heading">Need Workforce, or Looking for Work?</h2>
-            <p>
-              Reach out to request manpower for your industry, or register as a worker to
-              be considered for available opportunities.
-            </p>
-            <div className="ve-hero__actions">
-              <Button as="a" href="/employers" variant="primary">
-                {companyConfig.messaging.primaryCta}
-              </Button>
-              <Button as="a" href="/workers" variant="secondary">
-                {companyConfig.messaging.secondaryCta}
-              </Button>
-            </div>
-          </div>
-        </Container>
-      </section>
+      <Hero />
+      <TrustStrip />
+      <AboutPreview />
+      <Capabilities />
+      <Industries />
+      <ProcessTimeline />
+      <SafetyCompliance />
+      <WhyUs />
+      <EnterpriseCta />
+      <FinalCta />
     </>
   );
 }

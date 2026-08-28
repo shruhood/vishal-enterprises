@@ -24,6 +24,7 @@ export function Workers() {
     title: "Register as a Worker",
     description:
       "Register with Vishal Enterprises to be considered for skilled, semi-skilled and unskilled workforce opportunities in Daman, Vapi, Bhilad and Silvassa.",
+    path: "/workers",
   });
 
   const [state, setState] = useState<FormState>("idle");

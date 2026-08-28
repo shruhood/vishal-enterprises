@@ -8,6 +8,7 @@ export function Industries() {
     title: "Industries",
     description:
       "Industries we serve with workforce solutions — pharmaceuticals, manufacturing, logistics, textiles, packaging and more.",
+    path: "/industries",
   });
 
   return (

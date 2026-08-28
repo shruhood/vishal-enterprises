@@ -29,8 +29,8 @@ export function Header() {
               <ThemeToggle />
             </div>
             <div className="ve-header__cta-desktop">
-              <Button as="a" href="/employers" variant="primary">
-                {companyConfig.messaging.primaryCta}
+              <Button as="a" href="/request-workforce" variant="primary">
+                Request Workforce
               </Button>
             </div>
             <button

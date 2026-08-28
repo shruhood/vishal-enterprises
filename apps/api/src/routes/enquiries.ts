@@ -66,6 +66,11 @@ enquiriesRoute.post("/", async (c) => {
   const location = optionalString(obj, "location", { max: 100 });
   const workers_needed = optionalInt(obj, "workers_needed");
   const message = optionalString(obj, "message", { max: 1000 });
+  // B2B /request-workforce specific fields (all optional)
+  const job_category = optionalString(obj, "job_category", { max: 100 });
+  const workforce_size = optionalString(obj, "workforce_size", { max: 50 });
+  const deployment_date = optionalString(obj, "deployment_date", { max: 50 });
+  const project_location = optionalString(obj, "project_location", { max: 100 });
 
   if (Object.keys(fields).length > 0) {
     throw new ValidationError("Some fields need attention.", fields);
@@ -87,18 +92,21 @@ enquiriesRoute.post("/", async (c) => {
        VALUES (?1, ?2, ?3, ?4, ?5, 'lead', ?6, ?6)`
     ).bind(employerId, company_name!, contact_name!, phone!, emailRaw, now),
     c.env.DB.prepare(
-      `INSERT INTO enquiries (id, employer_id, company_name, contact_name, phone, email, message, status, created_at)
-       VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, 'new', ?8)`
-    ).bind(enquiryId, employerId, company_name!, contact_name!, phone!, emailRaw, message, now),
+      `INSERT INTO enquiries (id, employer_id, company_name, contact_name, phone, email, message, status, created_at, job_category, workforce_size, deployment_date, project_location)
+       VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, 'new', ?8, ?9, ?10, ?11, ?12)`
+    ).bind(enquiryId, employerId, company_name!, contact_name!, phone!, emailRaw, message, now, job_category, workforce_size, deployment_date, project_location),
   ]);
 
   // Also record the free-text industry/location in the enquiry's `message`
-  // envelope so the CRM UI can show what the lead asked for. We append
-  // only if provided and message exists, otherwise create a structured blob.
+  // envelope so the CRM UI can show what the lead asked for.
   const meta = [
     industry ? `industry: ${industry}` : null,
     location ? `location: ${location}` : null,
     workers_needed != null ? `workers_needed: ${workers_needed}` : null,
+    job_category ? `job_category: ${job_category}` : null,
+    workforce_size ? `workforce_size: ${workforce_size}` : null,
+    deployment_date ? `deployment_date: ${deployment_date}` : null,
+    project_location ? `project_location: ${project_location}` : null,
   ]
     .filter(Boolean)
     .join(" | ");

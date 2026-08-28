@@ -8,6 +8,7 @@ export function Services() {
     title: "Services",
     description:
       "Skilled, semi-skilled and unskilled workforce services for industry — Vishal Enterprises.",
+    path: "/services",
   });
 
   const groups = [

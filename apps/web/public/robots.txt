@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /admin
-Disallow: /portal
 
-Sitemap: https://[COMPANY_DOMAIN]/sitemap.xml
+Sitemap: https://vishal-enterprises-web-2ha.pages.dev/sitemap.xml

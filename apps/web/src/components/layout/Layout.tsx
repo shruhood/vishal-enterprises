@@ -1,6 +1,8 @@
 import { Outlet } from "react-router-dom";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { MobileBottomBar } from "./MobileBottomBar";
+import "./layout.css";
 
 export function Layout() {
   return (
@@ -13,6 +15,7 @@ export function Layout() {
         <Outlet />
       </main>
       <Footer />
+      <MobileBottomBar />
     </div>
   );
 }

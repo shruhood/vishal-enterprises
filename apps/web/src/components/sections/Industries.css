@@ -1,0 +1,50 @@
+.ve-ind__grid {
+  list-style: none;
+  margin: 0 0 var(--space-6);
+  padding: 0;
+  display: grid;
+  gap: var(--space-4);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .ve-ind__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 980px) {
+  .ve-ind__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.ve-ind__card {
+  background: var(--color-ink-3);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  border-left: 3px solid var(--color-primary);
+}
+
+.ve-ind__title {
+  font-size: var(--font-size-md);
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 var(--space-2);
+}
+
+.ve-ind__desc {
+  font-size: var(--font-size-sm);
+  color: var(--color-charcoal-muted);
+  margin: 0;
+  line-height: var(--line-height-relaxed);
+}
+
+.ve-ind__img {
+  width: 100%;
+  height: clamp(220px, 32vw, 360px);
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
