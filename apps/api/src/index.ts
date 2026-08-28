@@ -11,6 +11,7 @@ import { authRoute } from "./routes/auth";
 import { workersAdminRoute } from "./routes/admin/workers";
 import { enquiriesAdminRoute } from "./routes/admin/enquiries";
 import { jobsAdminRoute } from "./routes/admin/jobs";
+import { uploadsRoute } from "./routes/uploads";
 import { verifySession } from "./lib/auth";
 import { ValidationError } from "./lib/validate";
 
@@ -61,6 +62,7 @@ admin.use("*", async (c, next) => {
 admin.route("/workers", workersAdminRoute);
 admin.route("/enquiries", enquiriesAdminRoute);
 admin.route("/jobs", jobsAdminRoute);
+admin.route("/workers", uploadsRoute);
 
 // Mount admin app under /admin
 app.route("/admin", admin);

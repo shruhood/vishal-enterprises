@@ -5,8 +5,10 @@
  */
 export interface Env {
   DB: D1Database;
-  // TODO: Uncomment when R2 bucket is created
-  // DOCUMENTS: R2Bucket;
+  // Optional until R2 is enabled in the Cloudflare Dashboard and the
+  // `vishal-documents` bucket is created. When absent, upload routes return
+  // a clear 503 instead of crashing at typecheck/boot.
+  DOCUMENTS?: R2Bucket;
 
   ENVIRONMENT: "development" | "staging" | "production";
   ALLOWED_ORIGIN: string;
