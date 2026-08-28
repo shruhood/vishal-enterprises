@@ -40,7 +40,7 @@ export const corsPolicy: MiddlewareHandler<{ Bindings: Env }> = async (c, next) 
  * this with Cloudflare Rate Limiting rules and/or a Durable Object/KV
  * counter — this stub documents the intent for Phase 0 and is a no-op.
  */
-export const rateLimitPlaceholder: MiddlewareHandler<{ Bindings: Env }> = async (c, next) => {
+export const rateLimitPlaceholder: MiddlewareHandler<{ Bindings: Env }> = async (_c, next) => {
   // TODO: implement per-IP / per-route rate limiting before public launch.
   await next();
 };
