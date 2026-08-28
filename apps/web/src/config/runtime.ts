@@ -5,7 +5,7 @@
  * (`VITE_API_BASE_URL`) and falls back to the live worker URL so the
  * production build works out of the box.
  */
-const FALLBACK_API_BASE = "https://vishal-enterprises-api.gujaratsamachar.workers.dev";
+const FALLBACK_API_BASE = "https://vishal-enterprises-api.shruhood.workers.dev";
 
 export const runtimeConfig = {
   apiBaseUrl:
