@@ -3,7 +3,7 @@ main = "src/index.ts"
 compatibility_date = "2026-08-01"
 compatibility_flags = ["nodejs_compat"]
 
-account_id = "1efca3c592c0db1448c88640668fd4da"
+account_id = "92080d83f64c1dca378ff1edfd4c326a"
 
 # ---------------------------------------------------------------------------
 # D1 — structured data (employers, workers, jobs, applications, etc.)
@@ -11,7 +11,7 @@ account_id = "1efca3c592c0db1448c88640668fd4da"
 [[d1_databases]]
 binding = "DB"
 database_name = "vishal_db"
-database_id = "df81a344-0ba7-4152-b6f4-6b36adc9547a"
+database_id = "0a076b78-f04e-43bd-9a98-69617f1e569a"
 
 # ---------------------------------------------------------------------------
 # R2 — private files (resumes, certificates, company documents). This
