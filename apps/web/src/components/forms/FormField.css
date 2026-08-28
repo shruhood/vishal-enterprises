@@ -1,0 +1,60 @@
+.ve-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1.1rem;
+}
+
+.ve-field__label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--ve-text, #1a1a1a);
+}
+
+.ve-field__required {
+  color: var(--ve-color-danger, #c0392b);
+  margin-left: 2px;
+}
+
+.ve-field__hint {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--ve-text-muted, #6b6b6b);
+}
+
+.ve-field__error {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--ve-color-danger, #c0392b);
+}
+
+.ve-field--error input,
+.ve-field--error select,
+.ve-field--error textarea {
+  border-color: var(--ve-color-danger, #c0392b);
+}
+
+.ve-field input,
+.ve-field select,
+.ve-field textarea {
+  font: inherit;
+  padding: 0.65rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid var(--ve-border, #d4d4d4);
+  background: var(--ve-bg-input, #fff);
+  color: var(--ve-text, #1a1a1a);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.ve-field input:focus,
+.ve-field select:focus,
+.ve-field textarea:focus {
+  outline: none;
+  border-color: var(--ve-color-primary, #EA6A12);
+  box-shadow: 0 0 0 3px rgba(234, 106, 18, 0.18);
+}
+
+.ve-field textarea {
+  min-height: 6rem;
+  resize: vertical;
+}

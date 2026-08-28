@@ -1,0 +1,111 @@
+.ve-admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--ve-surface, #fff);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.ve-admin-table th,
+.ve-admin-table td {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--ve-border, #e5e5e5);
+  font-size: 0.9rem;
+  vertical-align: top;
+}
+
+.ve-admin-table th {
+  background: #f0f0f5;
+  font-weight: 600;
+  color: var(--ve-text-muted, #4a4a4a);
+}
+
+.ve-admin-table__msg {
+  max-width: 320px;
+  color: var(--ve-text-muted, #4a4a4a);
+  line-height: 1.4;
+}
+
+.ve-admin-table select {
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--ve-border, #ccc);
+  font-size: 0.85rem;
+}
+
+.ve-admin-error {
+  color: #c0392b;
+  background: rgba(192, 57, 43, 0.08);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.ve-admin-btn {
+  background: var(--ve-color-primary, #ea6a12);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.ve-admin-btn:hover {
+  opacity: 0.9;
+}
+
+.ve-admin-btn--danger {
+  background: #c0392b;
+}
+
+.ve-admin-create {
+  margin-bottom: 1.5rem;
+  background: var(--ve-surface, #fff);
+  border: 1px solid var(--ve-border, #e5e5e5);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+}
+
+.ve-admin-create summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--ve-color-primary, #ea6a12);
+}
+
+.ve-admin-create__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.ve-admin-create__form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  gap: 0.25rem;
+}
+
+.ve-admin-create__form input,
+.ve-admin-create__form select,
+.ve-admin-create__form textarea {
+  padding: 0.5rem;
+  border: 1px solid var(--ve-border, #ccc);
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-family: inherit;
+}
+
+.ve-admin-create__check {
+  flex-direction: row !important;
+  align-items: center;
+  gap: 0.5rem !important;
+}
+
+.ve-admin-create__form button {
+  grid-column: 1 / -1;
+  width: fit-content;
+}

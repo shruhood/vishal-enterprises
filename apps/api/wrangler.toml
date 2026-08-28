@@ -31,7 +31,9 @@ database_id = "81e300fc-6339-40e2-a008-086062404336"
 # ---------------------------------------------------------------------------
 [vars]
 ENVIRONMENT = "development"
-ALLOWED_ORIGIN = "http://localhost:5173"
+# Comma-separated list of origins allowed to call the API. Production
+# (https://vishal-enterprises-web.pages.dev) is always included.
+ALLOWED_ORIGIN = "http://localhost:5173,https://vishal-enterprises-web.pages.dev"
 
 # Secrets to configure via `wrangler secret put <NAME>`:
 #   TURNSTILE_SECRET_KEY

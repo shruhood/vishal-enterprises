@@ -1,0 +1,35 @@
+.ve-employers__intro {
+  max-width: 720px;
+  margin-bottom: 2rem;
+}
+
+.ve-employers__intro h1 {
+  margin-bottom: 0.6rem;
+}
+
+.ve-employers__intro p {
+  color: var(--ve-text-muted, #4a4a4a);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.ve-form {
+  max-width: 720px;
+  background: var(--ve-bg-card, #fff);
+  padding: 1.75rem;
+  border-radius: 10px;
+  border: 1px solid var(--ve-border, #e4e4e4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.ve-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .ve-form__row {
+    grid-template-columns: 1fr;
+  }
+}

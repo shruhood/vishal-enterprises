@@ -16,3 +16,15 @@ export interface Env {
   SESSION_SIGNING_SECRET: string;
   ADMIN_INVITE_SECRET: string;
 }
+
+/**
+ * Extended context type for Hono — allows `c.set("adminUser", ...)`
+ * and `c.get("adminUser")` on admin routes.
+ */
+export interface AdminContext {
+  adminUser: {
+    userId: string;
+    role: "admin" | "staff";
+    exp: number;
+  };
+}

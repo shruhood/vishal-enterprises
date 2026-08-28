@@ -1,0 +1,25 @@
+.ve-form-status {
+  border-radius: 8px;
+  padding: 1rem 1.1rem;
+  margin-bottom: 1.2rem;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.ve-form-status--success {
+  background: rgba(46, 160, 67, 0.1);
+  border: 1px solid rgba(46, 160, 67, 0.4);
+  color: #1e6b3a;
+}
+
+.ve-form-status--error {
+  background: rgba(192, 57, 43, 0.08);
+  border: 1px solid rgba(192, 57, 43, 0.35);
+  color: #962b1f;
+}
+
+.ve-form-status--submitting {
+  background: rgba(234, 106, 18, 0.08);
+  border: 1px solid rgba(234, 106, 18, 0.3);
+  color: #b04a07;
+}

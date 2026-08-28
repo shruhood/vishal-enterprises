@@ -1,0 +1,83 @@
+.ve-jobs {
+  padding-top: 1rem;
+}
+
+.ve-jobs__header {
+  margin-bottom: 2rem;
+}
+
+.ve-jobs__header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.ve-jobs__lead {
+  color: var(--ve-text-muted, #4a4a4a);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 720px;
+}
+
+.ve-jobs__empty {
+  color: var(--ve-text-muted, #4a4a4a);
+  font-style: italic;
+  padding: 2rem 0;
+}
+
+.ve-jobs__empty--error {
+  color: #c0392b;
+  font-style: normal;
+}
+
+.ve-jobs__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.ve-jobs__card {
+  background: var(--ve-surface, #fff);
+  border: 1px solid var(--ve-border, #e5e5e5);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.ve-jobs__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.ve-jobs__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.ve-tag {
+  display: inline-block;
+  background: rgba(234, 106, 18, 0.1);
+  color: var(--ve-color-primary, #EA6A12);
+  border-radius: 6px;
+  padding: 0.15rem 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.ve-tag--skill {
+  background: rgba(46, 160, 67, 0.1);
+  color: #2ea043;
+}
+
+.ve-jobs__wage {
+  font-weight: 600;
+  margin: 0.25rem 0;
+}
+
+.ve-jobs__desc {
+  color: var(--ve-text-muted, #4a4a4a);
+  line-height: 1.5;
+  margin: 0.5rem 0 0;
+}

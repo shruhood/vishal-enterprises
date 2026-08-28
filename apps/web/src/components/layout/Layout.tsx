@@ -1,8 +1,8 @@
-import { type ReactNode } from "react";
+import { Outlet } from "react-router-dom";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 
-export function Layout({ children }: { children: ReactNode }) {
+export function Layout() {
   return (
     <div className="ve-app-shell">
       <a href="#main-content" className="skip-link">
@@ -10,7 +10,7 @@ export function Layout({ children }: { children: ReactNode }) {
       </a>
       <Header />
       <main id="main-content" tabIndex={-1}>
-        {children}
+        <Outlet />
       </main>
       <Footer />
     </div>

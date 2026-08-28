@@ -15,6 +15,7 @@ export const primaryNavItems: NavItem[] = [
   { label: "For Employers", href: "/employers" },
   { label: "For Workers", href: "/workers" },
   { label: "Contact", href: "/contact" },
+  { label: "Admin", href: "/admin/login" },
 ];
 
 export function Navigation({ onNavigate }: { onNavigate?: () => void }) {

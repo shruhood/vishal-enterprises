@@ -6,8 +6,37 @@ import type { Env } from "../types/env";
  * conservative — tighten further once real third-party origins (fonts,
  * analytics) are finalized.
  */
-export const securityHeaders: MiddlewareHandler<{ Bindings: Env }> = async (c, next) => {
+export const securityHeaders: MiddlewareHandler<{ Bindings: Env }> = async (_c, next) => {
   await next();
+};
+
+/**
+ * CORS restricted to the configured frontend origin(s) only — the API
+ * is not intended to be called from arbitrary third-party origins.
+ *
+ * `ALLOWED_ORIGIN` may be a single origin or a comma-separated list
+ * (e.g. "http://localhost:5173,https://example.pages.dev"). The
+ * Access-Control-Allow-Origin header echoes the request's Origin when
+ * it matches an allowed entry; otherwise no CORS response is added
+ * and the browser will block the call.
+ */
+export const corsPolicy: MiddlewareHandler<{ Bindings: Env }> = async (c, next) => {
+  const allowed = (c.env.ALLOWED_ORIGIN ?? "")
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
+  const requestOrigin = c.req.header("Origin");
+
+  if (requestOrigin && allowed.includes(requestOrigin)) {
+    c.header("Access-Control-Allow-Origin", requestOrigin);
+    c.header("Vary", "Origin");
+    c.header("Access-Control-Allow-Methods", "GET,POST,PUT,PATCH,DELETE,OPTIONS");
+    c.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+    c.header("Access-Control-Allow-Credentials", "true");
+    c.header("Access-Control-Max-Age", "600");
+  }
+
+  // Common security headers on every response.
   c.header("X-Content-Type-Options", "nosniff");
   c.header("X-Frame-Options", "DENY");
   c.header("Referrer-Policy", "strict-origin-when-cross-origin");
@@ -16,18 +45,6 @@ export const securityHeaders: MiddlewareHandler<{ Bindings: Env }> = async (c, n
     "Content-Security-Policy",
     "default-src 'self'; frame-ancestors 'none'; base-uri 'self'"
   );
-};
-
-/**
- * CORS restricted to the configured frontend origin only — the API is not
- * intended to be called from arbitrary third-party origins.
- */
-export const corsPolicy: MiddlewareHandler<{ Bindings: Env }> = async (c, next) => {
-  const origin = c.env.ALLOWED_ORIGIN;
-  c.header("Access-Control-Allow-Origin", origin);
-  c.header("Access-Control-Allow-Methods", "GET,POST,PUT,PATCH,DELETE,OPTIONS");
-  c.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
-  c.header("Access-Control-Allow-Credentials", "true");
 
   if (c.req.method === "OPTIONS") {
     return c.body(null, 204);

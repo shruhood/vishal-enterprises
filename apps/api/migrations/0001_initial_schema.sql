@@ -101,6 +101,7 @@ CREATE TABLE IF NOT EXISTS workers (
     CHECK (status IN ('registered', 'verified', 'available', 'shortlisted', 'assigned', 'active', 'inactive')),
   pf_applicable INTEGER NOT NULL DEFAULT 0,
   esic_applicable INTEGER NOT NULL DEFAULT 0,
+  experience_years INTEGER,
   created_at TEXT NOT NULL DEFAULT (CURRENT_TIMESTAMP),
   updated_at TEXT NOT NULL DEFAULT (CURRENT_TIMESTAMP)
 );
@@ -134,6 +135,7 @@ CREATE TABLE IF NOT EXISTS jobs (
   industry_id TEXT REFERENCES industries(id),
   location_id TEXT REFERENCES locations(id),
   skill_level TEXT NOT NULL CHECK (skill_level IN ('skilled', 'semi_skilled', 'unskilled')),
+  wage TEXT,
   description TEXT,
   is_published INTEGER NOT NULL DEFAULT 0,
   created_at TEXT NOT NULL DEFAULT (CURRENT_TIMESTAMP),

@@ -1,0 +1,54 @@
+.ve-workers__intro {
+  max-width: 720px;
+  margin-bottom: 2rem;
+}
+
+.ve-workers__intro h1 {
+  margin-bottom: 0.6rem;
+}
+
+.ve-workers__intro p {
+  color: var(--ve-text-muted, #4a4a4a);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.ve-workers__highlights {
+  margin-top: 1rem;
+  padding-left: 1.2rem;
+  color: var(--ve-text, #1a1a1a);
+}
+
+.ve-workers__highlights li {
+  margin-bottom: 0.35rem;
+}
+
+.ve-form__fieldset {
+  border: 1px solid var(--ve-border, #e4e4e4);
+  border-radius: 8px;
+  padding: 0.8rem 1rem 1rem;
+  margin-bottom: 1.2rem;
+  background: var(--ve-bg-soft, #fafafa);
+}
+
+.ve-form__fieldset legend {
+  padding: 0 0.4rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--ve-text, #1a1a1a);
+}
+
+.ve-form__check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.ve-form__check input {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--ve-color-primary, #EA6A12);
+}

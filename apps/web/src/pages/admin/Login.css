@@ -1,0 +1,25 @@
+.ve-login {
+  max-width: 420px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: var(--ve-surface, #fff);
+  border: 1px solid var(--ve-border, #e5e5e5);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.ve-login h1 {
+  margin-bottom: 0.25rem;
+}
+
+.ve-login__hint {
+  color: var(--ve-text-muted, #4a4a4a);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.ve-login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}

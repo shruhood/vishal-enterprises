@@ -1,0 +1,88 @@
+.ve-admin {
+  display: flex;
+  min-height: calc(100vh - 64px);
+}
+
+.ve-admin__loading {
+  padding: 4rem;
+  text-align: center;
+  color: var(--ve-text-muted, #4a4a4a);
+}
+
+.ve-admin__nav {
+  width: 220px;
+  background: #1a1a2e;
+  color: #fff;
+  padding: 1.5rem 1rem;
+  flex-shrink: 0;
+}
+
+.ve-admin__brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: var(--ve-color-primary, #ea6a12);
+}
+
+.ve-admin__nav nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.ve-admin__nav a {
+  color: #cfcfe0;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+}
+
+.ve-admin__nav a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.ve-admin__logout {
+  margin-top: 1rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.ve-admin__logout:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.ve-admin__main {
+  flex: 1;
+  padding: 2rem;
+  background: var(--ve-bg, #f7f7f9);
+}
+
+.ve-admin__cards {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.ve-admin__cards a {
+  display: block;
+  padding: 1.5rem;
+  background: var(--ve-surface, #fff);
+  border: 1px solid var(--ve-border, #e5e5e5);
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--ve-text, #1a1a1a);
+}
+
+.ve-admin__cards a:hover {
+  border-color: var(--ve-color-primary, #ea6a12);
+}

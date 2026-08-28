@@ -1,0 +1,33 @@
+.ve-notfound {
+  text-align: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.ve-notfound__code {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--ve-color-primary, #EA6A12);
+  margin: 0 0 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.ve-notfound h1 {
+  margin-bottom: 0.5rem;
+}
+
+.ve-notfound p {
+  color: var(--ve-text-muted, #4a4a4a);
+  margin-bottom: 1.5rem;
+}
+
+.ve-notfound__link {
+  color: var(--ve-color-primary, #EA6A12);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.6rem 0.8rem;
+}
+
+.ve-notfound__link:hover {
+  text-decoration: underline;
+}

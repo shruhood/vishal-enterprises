@@ -1,0 +1,88 @@
+.ve-content h1 {
+  margin-bottom: 0.5rem;
+}
+
+.ve-content__lead {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--ve-text-muted, #4a4a4a);
+  max-width: 760px;
+  margin-bottom: 2rem;
+}
+
+.ve-content__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 720px) {
+  .ve-content__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.ve-content__grid h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+  color: var(--ve-text, #1a1a1a);
+}
+
+.ve-content__grid p {
+  color: var(--ve-text-muted, #4a4a4a);
+  line-height: 1.55;
+}
+
+.ve-content__block {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--ve-border, #e4e4e4);
+}
+
+.ve-content__block h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+}
+
+.ve-content__block p {
+  color: var(--ve-text-muted, #4a4a4a);
+  line-height: 1.55;
+  max-width: 760px;
+}
+
+.ve-content__list {
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+  color: var(--ve-text, #1a1a1a);
+}
+
+.ve-content__list li {
+  margin-bottom: 0.25rem;
+}
+
+.ve-content__steps {
+  margin: 0.5rem 0 0;
+  padding-left: 1.4rem;
+  color: var(--ve-text, #1a1a1a);
+}
+
+.ve-content__steps li {
+  margin-bottom: 0.6rem;
+  line-height: 1.55;
+  color: var(--ve-text-muted, #4a4a4a);
+}
+
+.ve-content__steps strong {
+  color: var(--ve-text, #1a1a1a);
+}
+
+.ve-chip-list--lg {
+  margin-top: 1.5rem;
+}
+
+.ve-chip-list--lg .ve-chip {
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+}

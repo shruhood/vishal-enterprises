@@ -1,0 +1,17 @@
+HTTP/1.1 200 OK
+Date: Fri, 28 Aug 2026 09:37:09 GMT
+Content-Type: application/json
+Content-Length: 26
+Connection: keep-alive
+Set-Cookie: ve_session=eyJ1c2VySWQiOiJhZG1pbi0wMDEiLCJyb2xlIjoiYWRtaW4iLCJleHAiOjE3ODc5Mzg2Mjl9.%2BbPD37y4ZkO70Ygn4Hz4Sfw7en7iAf7oS6ct8ts%2FhX4%3D; Max-Age=28800; Path=/; HttpOnly; Secure; SameSite=Strict
+Content-Security-Policy: default-src 'self'; frame-ancestors 'none'; base-uri 'self'
+Permissions-Policy: geolocation=(), camera=(), microphone=()
+Referrer-Policy: strict-origin-when-cross-origin
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+Report-To: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=Y%2BvR9cY3fUwVz09GqRoW5%2FXAVPKn61J1CSfUYG3mazcxo7Sj7kIlLfVFgPyrdhqPTURPS3F0KuMwtWtGoj7y2KUI%2FkRRNrd0cHSt%2BHHl%2FtTIixV67HmpGVtXFhMq3oWKbW26x6%2Fszhitd6tL%2Fc1MmAqECm%2BWRJHk5h4qaT53P23qYcN%2Ff1FqSR8syMp3TMxfHQ%3D%3D"}]}
+Nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+Server: cloudflare
+CF-RAY: a32255ef0f7ddb81-BOM
+alt-svc: h3=":443"; ma=86400
+
