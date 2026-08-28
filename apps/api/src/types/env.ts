@@ -5,7 +5,8 @@
  */
 export interface Env {
   DB: D1Database;
-  DOCUMENTS: R2Bucket;
+  // TODO: Uncomment when R2 bucket is created
+  // DOCUMENTS: R2Bucket;
 
   ENVIRONMENT: "development" | "staging" | "production";
   ALLOWED_ORIGIN: string;

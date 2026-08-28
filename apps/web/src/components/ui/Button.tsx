@@ -21,21 +21,21 @@ type LinkProps = CommonProps &
   };
 
 export function Button(props: ButtonProps | LinkProps) {
-  const { variant = "primary", children, className, ...rest } = props;
+  const { variant = "primary", children, className, as = "button", ...rest } = props;
   const classes = ["ve-btn", `ve-btn--${variant}`, className].filter(Boolean).join(" ");
 
-  if (props.as === "a") {
-    const { as: _as, ...anchorRest } = rest as AnchorHTMLAttributes<HTMLAnchorElement>;
+  if (as === "a") {
+    const { href, ...anchorRest } = rest as AnchorHTMLAttributes<HTMLAnchorElement>;
     return (
-      <a className={classes} {...anchorRest}>
+      <a className={classes} href={href} {...anchorRest}>
         {children}
       </a>
     );
   }
 
-  const { as: _as, ...buttonRest } = rest as ButtonHTMLAttributes<HTMLButtonElement>;
+  const { type, ...buttonRest } = rest as ButtonHTMLAttributes<HTMLButtonElement>;
   return (
-    <button className={classes} type={buttonRest.type ?? "button"} {...buttonRest}>
+    <button className={classes} type={type ?? "button"} {...buttonRest}>
       {children}
     </button>
   );

@@ -1,4 +1,5 @@
-import { useTheme, type ThemeMode } from "../../theme/useTheme";
+import { useTheme } from "../../theme/useTheme";
+import { type ThemeMode } from "../../theme/ThemeProvider";
 import "./ThemeToggle.css";
 
 const options: { mode: ThemeMode; label: string }[] = [

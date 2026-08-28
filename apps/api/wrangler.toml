@@ -10,16 +10,19 @@ compatibility_flags = ["nodejs_compat"]
 [[d1_databases]]
 binding = "DB"
 database_name = "vishal_db"
-database_id = "[D1_DATABASE_ID]"
+database_id = "81e300fc-6339-40e2-a008-086062404336"
 
 # ---------------------------------------------------------------------------
 # R2 — private files (resumes, certificates, company documents). This
 # bucket must NEVER be given public access; files are served only through
 # authenticated Worker routes using short-lived signed URLs.
+# TODO: Enable R2 in Cloudflare Dashboard, then run:
+#   wrangler r2 bucket create vishal-documents
+# and uncomment the block below.
 # ---------------------------------------------------------------------------
-[[r2_buckets]]
-binding = "DOCUMENTS"
-bucket_name = "vishal-documents"
+# [[r2_buckets]]
+# binding = "DOCUMENTS"
+# bucket_name = "vishal-documents"
 
 # ---------------------------------------------------------------------------
 # Environment variables / secrets.
